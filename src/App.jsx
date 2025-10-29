@@ -3,7 +3,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
-
+import TicketCard from './components/TicketCards';
+import TaskStatus from './components/TaskStatus';
+import Footer from './components/Footer';
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -50,10 +52,8 @@ function App() {
           resolvedCount={resolvedTickets.length}
         />
        
-        </div>
-      </div>
+      <Footer />
      
-    
   );
 }
 
