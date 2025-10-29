@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import TicketCard from './components/TicketCards';
+import TaskStatus from './components/TaskStatus';
 import Footer from './components/Footer';
 
 function App() {
@@ -64,7 +65,11 @@ function App() {
             </div>
           </div>
           <div className="lg:col-span-1">
-           
+            <TaskStatus
+              inProgressTickets={inProgressTickets}
+              resolvedTickets={resolvedTickets}
+              onComplete={handleComplete}
+            />
           </div>
         </div>
       </div>
