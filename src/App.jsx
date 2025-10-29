@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
+import Banner from './components/Banner';
 
 
 function App() {
@@ -43,8 +44,16 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
-      
-    </div>
+      <div className="container mx-auto px-4 pt-20 pb-8 flex-grow">
+        <Banner
+          inProgressCount={inProgressTickets.length}
+          resolvedCount={resolvedTickets.length}
+        />
+       
+        </div>
+      </div>
+     
+    
   );
 }
 
